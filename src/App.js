@@ -1,15 +1,55 @@
-import './App.css';
+import Home from './components/Home';
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
-      <h1>Deloitte React App</h1>
-      <p>Deloitte ReactJS application is running...</p>
+      <h1>App Component</h1>
+      <p>App Deloitte React App</p>
+      {/* <Home></Home> */}
+      <Home />
     </div>
   );
 }
 
 export default App;
+
+// const App = () => {
+
+//   const userName = 'Sonu';
+//   const salary = 10.5;
+
+//   const employee = {
+//     firstName: 'Sonu',
+//     salary: 10.5
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>Deloitte React App</h1>
+//       <p>Deloitte ReactJS application is running...</p>
+//       <p> {userName} </p>
+//       <p>{salary}</p>
+//       <p> {employee.firstName} </p>
+//       <p> {employee.salary} </p>
+//       {/* <p> {employee} </p> */}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+
+// function App() {
+//   return (
+//     <div>
+//       <h1>Deloitte React App</h1>
+//       <p>Deloitte ReactJS application is running...</p>
+//     </div>
+//   );
+// }
+
+// export default App;
 
 
 // import logo from './logo.svg';
