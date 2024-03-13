@@ -1,27 +1,63 @@
-
 const Home = () => {
 
-    // return <p>Some stuff</p>
+    // const employee = {
+    //     eid: 101,
+    //     firstName: 'Sonu',
+    //     salary: 10.5
+    // };
 
-    // return (
-    // <p>Some stuff</p>
-    // );
-
-    // return (
-    //     <div>
-    //         <p>Some stuff</p>
-    //         <p>Some stuff</p>
-    //         <p>Some stuff</p>
-    //     </div>
-    // );
-
+    const friends = [
+        { firstName: 'Sonu', lastName: 'Joshi' },
+        { firstName: 'Monu', lastName: 'Singh' },
+        { firstName: 'Tonu', lastName: 'Reddy' },
+    ];
 
     return (
         <div>
             <h1>Home Component</h1>
             <p>Home component</p>
+            {/* <p> {employee.firstName} </p> */}
+            {/* <p> {friends} </p> */}
+            {/* {friends.map((friend) => { return <p> {friend.firstName} </p> })} */}
+            {friends.map((friend) => {
+                return (
+                    <div>
+                        <p> {friend.firstName} </p>
+                        <p> {friend.lastName} </p>
+                    </div>
+                )
+            })}
         </div>
     );
 }
 
 export default Home;
+
+
+
+// const Home = () => {
+
+//     // return <p>Some stuff</p>
+
+//     // return (
+//     // <p>Some stuff</p>
+//     // );
+
+//     // return (
+//     //     <div>
+//     //         <p>Some stuff</p>
+//     //         <p>Some stuff</p>
+//     //         <p>Some stuff</p>
+//     //     </div>
+//     // );
+
+
+//     return (
+//         <div>
+//             <h1>Home Component</h1>
+//             <p>Home component</p>
+//         </div>
+//     );
+// }
+
+// export default Home;
