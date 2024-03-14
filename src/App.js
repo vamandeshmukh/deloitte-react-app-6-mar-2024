@@ -23,17 +23,20 @@ class App extends Component {
    firstName = 'Sonu';
 
   render = () => {
+    // lastName = 'Reddy';
     return (
       <div className="App" >
         <h1>App Component</h1>
         <p>App Deloitte React App</p>
         <p>{this.firstName}</p>
+        {/* <p>{lastName}</p> */}
         {/* <Home></Home> */}
         <Home />
       </div >
     );
   };
 }
+
 
 export default App;
 
