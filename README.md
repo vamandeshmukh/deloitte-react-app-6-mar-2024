@@ -27,7 +27,8 @@ map() function with key
 fragments in JSX 
 <></>
 
-
+conditional rendering 
+- with {(condition) && <></>}
 
 --------------------------------------
 
