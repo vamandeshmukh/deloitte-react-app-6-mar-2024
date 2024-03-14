@@ -6,13 +6,17 @@ const ProductList = () => {
     const parentData = 'Sonu';
     const [childDataInParent, setChildDataInParent] = useState('');
 
+    const getDataFromChild = (data) => {
+        console.log(data);
+        setChildDataInParent(data);
+    };
 
     return (
         <>
-            <h1>List of the Products (Parent) </h1>
+            <h1>List of the Products - Parent Component </h1>
             <p>Parent data in parent component: {parentData}</p>
             <p>Child data in parent component: {childDataInParent}</p>
-            <ProductDetails parentToChild={parentData} abc="def" />
+            <ProductDetails parentToChild={parentData} childToParent={getDataFromChild} />
         </>
     );
 };

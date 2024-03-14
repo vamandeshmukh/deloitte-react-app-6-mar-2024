@@ -1,18 +1,23 @@
 const ProductDetails = (props) => {
 
-    console.log(props);
-
     const childData = 'Monu';
+    const parentDataInChild = props.parentToChild;
+
+    const sendDataToParent = () => {
+        console.log(childData);
+        props.childToParent(childData);
+    };
 
     return (
         <>
-            <h1>ProductDetails Component (Child) </h1>
-            <p>Parent data in child component: {props.parentToChild}</p>
+            <h1>ProductDetails - Child Component </h1>
+            <p>Parent data in child component: {parentDataInChild}</p>
             <p>Child data in child component: {childData}</p>
-            <button>Pass Data to Parent</button>
+            <button onClick={sendDataToParent}>Pass Data to Parent</button>
         </>
     );
 }
+
 export default ProductDetails;
 
 
@@ -44,3 +49,4 @@ export default ProductDetails;
 //     );
 // }
 // export default ProductDetails;
+
