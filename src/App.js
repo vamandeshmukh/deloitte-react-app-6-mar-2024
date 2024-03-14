@@ -1,44 +1,43 @@
 
-// // function omponent 
-// import Home from './components/Home';
-// const App = () => {
-//   return (
-//     <div className="App">
-//       <h1>App Component</h1>
-//       <p>App Deloitte React App</p>
-//       {/* <Home></Home> */}
-//       <Home />
-//     </div>
-//   );
-// }
-// export default App;
+// function omponent 
+import Home from './components/Home';
+const App = () => {
+  return (
+    <div className="App">
+      <h1>App Component</h1>
+      <p>App Deloitte React App</p>
+      {/* <Home></Home> */}
+      <Home />
+    </div>
+  );
+}
+export default App;
 
 // // class component 
 
-import { Component } from 'react';
-import Home from './components/Home';
+// import { Component } from 'react';
+// import Home from './components/Home';
 
-class App extends Component {
+// class App extends Component {
 
-   firstName = 'Sonu';
+//    firstName = 'Sonu';
 
-  render = () => {
-    // lastName = 'Reddy';
-    return (
-      <div className="App" >
-        <h1>App Component</h1>
-        <p>App Deloitte React App</p>
-        <p>{this.firstName}</p>
-        {/* <p>{lastName}</p> */}
-        {/* <Home></Home> */}
-        <Home />
-      </div >
-    );
-  };
-}
+//   render = () => {
+//     const lastName = 'Reddy';
+//     return (
+//       <div className="App" >
+//         <h1>App Component</h1>
+//         <p>App Deloitte React App</p>
+//         <p>{this.firstName}</p>
+//         <p>{lastName}</p>
+//         {/* <Home></Home> */}
+//         <Home />
+//       </div >
+//     );
+//   };
+// }
 
-
-export default App;
+// export default App;
 
 // const App = () => {
 

@@ -1,3 +1,36 @@
+# ReactJS for Deloitte 
+
+React 17.X 
+
+## Important concepts 
+
+Component 
+JSX 
+state 
+props 
+
+App component 
+Home component 
+
+## Types of components 
+
+class component 
+
+function component 
+- old JS function component 
+- new JS arrow function component 
+
+
+map() function with key 
+- to render array elements in JSX 
+
+fragments in JSX 
+<></>
+
+
+
+--------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
