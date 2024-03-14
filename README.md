@@ -30,6 +30,14 @@ fragments in JSX
 conditional rendering 
 - with {(condition) && <></>}
 
+
+state - holds all the data of a component 
+-----
+
+props - 
+----- 
+
+
 --------------------------------------
 
 # Getting Started with Create React App
