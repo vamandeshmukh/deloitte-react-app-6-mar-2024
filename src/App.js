@@ -1,13 +1,15 @@
 
 // function omponent 
 import Home from './components/Home';
+import ProductList from './components/ProductList';
 const App = () => {
   return (
     <div className="App">
       <h1>App Component</h1>
       <p>App Deloitte React App</p>
       {/* <Home></Home> */}
-      <Home />
+      {/* <Home /> */}
+      <ProductList />
     </div>
   );
 }
