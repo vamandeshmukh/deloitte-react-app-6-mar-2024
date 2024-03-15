@@ -11,10 +11,11 @@ const ProductDetails = (props) => {
         // code here 
     };
 
-    const searchProductById = (evt) => { };
-    console.log(productId);
-    // code here 
-    evt.preventDefault();
+    const searchProductById = (evt) => {
+        console.log(productId);
+        // code here 
+        evt.preventDefault();
+    };
 
     return (
         <>
