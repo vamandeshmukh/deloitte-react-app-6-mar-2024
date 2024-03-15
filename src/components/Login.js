@@ -19,14 +19,11 @@ const Login = () => {
 
     const submitLogin = (evt) => {
         console.log(loginData);
-        if (loginData.username === 'sonu' && loginData.password === 'sonu') {
+        if (loginData.username === 'sonu' && loginData.password === 'sonu')
             setLoginMessage(`${loginData.username} logged in successfully!`);
-            setLoginData({ username: '', password: '' });
-        }
-        else {
+        else
             setLoginMessage('Invalid credentials.');
-            setLoginData({ username: '', password: '' });
-        }
+        setLoginData({ username: '', password: '' }); // clear form
         evt.preventDefault(); // prevents page reload  
     };
 
