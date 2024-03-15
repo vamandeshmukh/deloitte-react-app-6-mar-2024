@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const Login = () => {
 
     const [loginData, setLoginData] = useState({ username: '', password: '' });
-    const [loginMessage, setLoginMessage] = useState();
+    const [loginMessage, setLoginMessage] = useState('');
 
     useEffect(() => {
         setLoginData(
@@ -14,6 +14,7 @@ const Login = () => {
 
     const submitLogin = () => {
         console.log('login successful!');
+        setLoginMessage('Successfully logged in!');
     };
 
     const handleUsername = (evt) => {
