@@ -18,10 +18,16 @@ const Login = () => {
     };
 
     const submitLogin = (evt) => {
-        console.log(evt.target);
-        setLoginMessage(`${loginData.username} logged in successfully!`);
-        evt.preventDefault(); // prevents page reload  
         console.log(loginData);
+        if (loginData.username === 'sonu' && loginData.password === 'sonu') {
+            setLoginMessage(`${loginData.username} logged in successfully!`);
+            setLoginData({ username: '', password: '' });
+        }
+        else {
+            setLoginMessage('Invalid credentials.');
+            setLoginData({ username: '', password: '' });
+        }
+        evt.preventDefault(); // prevents page reload  
     };
 
     return (
