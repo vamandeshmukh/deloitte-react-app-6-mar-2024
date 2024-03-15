@@ -12,31 +12,31 @@ const Login = () => {
         setLoginMessage('');
     }, []);
 
+    // const handleUsername = (evt) => {
+    //     console.log(evt.target.name);
+    //     console.log(evt.target.value);
+    //     setLoginData({ username: evt.target.value });
+    // };
+
+    const handleLogin = (evt) => {
+        console.log(evt.target.value);
+        setLoginData({ ...loginData, [evt.target.name]: evt.target.value });
+    };
+
     const submitLogin = (evt) => {
-        console.log('login successful!');
+        console.log(evt.target);
         setLoginMessage('Successfully logged in!');
-        evt.preventDefault();
-    };
-
-    const handleUsername = (evt) => {
-        console.log(evt.target.name);
-        console.log(evt.target.value);
-        setLoginData({ username: evt.target.value });
-    };
-
-    const handlePassword = (evt) => {
-        console.log(evt.target.name);
-        console.log(evt.target.value);
-        setLoginData({ password: evt.target.value });
+        evt.preventDefault(); // page reload prevents 
+        console.log(loginData);
     };
 
     return (
         <>
             <h1>Login Component</h1>
             <form onSubmit={submitLogin}>
-                <input type="text" name="username" value={loginData.username} onChange={handleUsername} />
+                <input type="text" name="username" value={loginData.username} onChange={handleLogin} />
                 <br />
-                <input type="password" name="password" value={loginData.password} onChange={handlePassword} />
+                <input type="password" name="password" value={loginData.password} onChange={handleLogin} />
                 <br />
                 <input type="submit" value="Login" />
             </form>
@@ -47,3 +47,55 @@ const Login = () => {
     );
 }
 export default Login;
+
+
+// import { useEffect, useState } from "react";
+
+// const Login = () => {
+
+//     const [loginData, setLoginData] = useState({ username: '', password: '' });
+//     const [loginMessage, setLoginMessage] = useState('');
+
+//     useEffect(() => {
+//         setLoginData(
+//             { username: '', password: '' }
+//         );
+//         setLoginMessage('');
+//     }, []);
+
+//     const submitLogin = (evt) => {
+//         console.log('login successful!');
+//         setLoginMessage('Successfully logged in!');
+//         evt.preventDefault(); // page reload prevents
+//     };
+
+//     const handleUsername = (evt) => {
+//         console.log(evt.target.name);
+//         console.log(evt.target.value);
+//         setLoginData({ username: evt.target.value });
+//     };
+
+//     const handlePassword = (evt) => {
+//         console.log(evt.target.name);
+//         console.log(evt.target.value);
+//         setLoginData({ password: evt.target.value });
+//     };
+
+//     return (
+//         <>
+//             <h1>Login Component</h1>
+//             <form onSubmit={submitLogin}>
+//                 <input type="text" name="username" value={loginData.username} onChange={handleUsername} />
+//                 <br />
+//                 <input type="password" name="password" value={loginData.password} onChange={handlePassword} />
+//                 <br />
+//                 <input type="submit" value="Login" />
+//             </form>
+//             {loginMessage &&
+//                 <p>Message:{loginMessage}</p>
+//             }
+//         </>
+//     );
+// }
+// export default Login;
+
