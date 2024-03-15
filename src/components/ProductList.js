@@ -12,7 +12,15 @@ const ProductList = () => {
         // .then((resp) => { handle response})
         // .catch((err) => { handle error});
 
-
+        axios.get('https://dummyjson.com/products')
+            .then((response) => {
+                console.log(response.data);
+                setProducts(response.data.products);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+            
     }, []);
     return (
         <>
