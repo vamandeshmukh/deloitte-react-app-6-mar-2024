@@ -1,13 +1,10 @@
 const ProductDetails = (props) => {
-
     const childData = 'Monu';
     const parentDataInChild = props.parentToChild;
-
     const sendDataToParent = () => {
         console.log(childData);
         props.childToParent(childData);
     };
-
     return (
         <>
             <h1>ProductDetails - Child Component </h1>
@@ -17,7 +14,6 @@ const ProductDetails = (props) => {
         </>
     );
 }
-
 export default ProductDetails;
 
 

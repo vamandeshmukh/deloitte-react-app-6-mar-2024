@@ -1,16 +1,12 @@
 import { useState } from "react";
 import ProductDetails from "./ProductDetails";
-
 const ProductList = () => {
-
     const parentData = 'Sonu';
     const [childDataInParent, setChildDataInParent] = useState('');
-
     const getDataFromChild = (data) => {
         console.log(data);
         setChildDataInParent(data);
     };
-
     return (
         <>
             <h1>List of the Products - Parent Component </h1>
@@ -20,7 +16,6 @@ const ProductList = () => {
         </>
     );
 };
-
 export default ProductList;
 
 

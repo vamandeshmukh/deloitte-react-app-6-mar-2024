@@ -1,17 +1,23 @@
 
 // function omponent 
 import Home from './components/Home';
+import Login from './components/Login';
+import MenuBar from './components/MenuBar';
 import ProductList from './components/ProductList';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>App Component</h1>
-      <p>App Deloitte React App</p>
-      {/* <Home></Home> */}
-      {/* <Home /> */}
-      <ProductList />
-    </div>
+    <>
+      <MenuBar />
+      <div className="container py-3">
+        <h1>App Component</h1>
+        <p>App Deloitte React App</p>
+        {/* <Home></Home> */}
+        {/* <Home /> */}
+        {/* <ProductList /> */}
+        <Login />
+      </div>
+    </>
   );
 }
 export default App;
