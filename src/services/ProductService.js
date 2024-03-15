@@ -3,16 +3,19 @@ import axios from "axios";
 const productUrl = 'https://dummyjson.com/products';
 
 // axios syntax 
-        // axios.get('url')
-        // .then((resp) => { handle response})
-        // .catch((err) => { handle error});
+// axios.get('url')
+// .then((resp) => { handle response})
+// .catch((err) => { handle error});
 
 const getAllProducts = () => {
     console.log('getAllProducts');
     return axios.get(productUrl);
 };
 
-const getProductById = () => { };
+const getProductById = (productId) => {
+    console.log(productId);
+    axios.get(`${productUrl}/${productId}`);
+};
 
 const addProduct = () => { };
 

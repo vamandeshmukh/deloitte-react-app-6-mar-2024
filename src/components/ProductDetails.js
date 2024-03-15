@@ -1,14 +1,25 @@
-import PropTypes from 'react'
+import { useState } from "react";
+import { getProductById } from "../services/ProductService";
 
 const ProductDetails = (props) => {
+
+    const [productId, setProductId] = useState('');
+    const [product, setProduct] = useState('');
 
     return (
         <>
             <h1>Product Details - Child Component </h1>
+            {product &&
+                <div>
+                    <p>{product.title}</p>
+                    <p>{product.description}</p>
+                    <p>{product.price}</p>
+                </div>
+            }
         </>
     );
-
 }
+
 export default ProductDetails;
 
 
