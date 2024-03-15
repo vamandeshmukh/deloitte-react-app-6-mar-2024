@@ -12,13 +12,11 @@ const Login = () => {
         setLoginMessage = '';
     }, []);
 
-
     const submitLogin = () => { };
 
     return (
         <>
             <h1>Login Component</h1>
-
             <form onSubmit={submitLogin}>
                 <input type="text" name="username" value={''} onChange={''} />
                 <input type="password" name="password" value={''} onChange={''} />
