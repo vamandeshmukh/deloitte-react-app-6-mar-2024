@@ -12,9 +12,10 @@ const Login = () => {
         setLoginMessage('');
     }, []);
 
-    const submitLogin = () => {
+    const submitLogin = (evt) => {
         console.log('login successful!');
         setLoginMessage('Successfully logged in!');
+        evt.preventDefault();
     };
 
     const handleUsername = (evt) => {
