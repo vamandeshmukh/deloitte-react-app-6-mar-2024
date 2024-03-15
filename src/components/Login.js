@@ -19,8 +19,8 @@ const Login = () => {
 
     const submitLogin = (evt) => {
         console.log(evt.target);
-        setLoginMessage('Successfully logged in!');
-        evt.preventDefault(); // page reload prevents 
+        setLoginMessage(`${loginData.username} logged in successfully!`);
+        evt.preventDefault(); // prevents page reload  
         console.log(loginData);
     };
 
@@ -35,7 +35,7 @@ const Login = () => {
                 <input type="submit" value="Login" />
             </form>
             {loginMessage &&
-                <p>Message:{loginMessage}</p>
+                <p>{loginMessage}</p>
             }
         </>
     );
