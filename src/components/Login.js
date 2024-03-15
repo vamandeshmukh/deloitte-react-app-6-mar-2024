@@ -4,7 +4,7 @@ const Login = () => {
 
     const [loginData, setLoginData] = useState({ username: '', password: '' });
     const [loginMessage, setLoginMessage] = useState('');
-    const [messageStyle, setMessageStyle] = useState({ color: 'blue' });
+    const [messageStyle, setMessageStyle] = useState({ color: 'blue' }); // apply multiple styles and change then dynamically 
 
     useEffect(() => {
         setLoginData(
