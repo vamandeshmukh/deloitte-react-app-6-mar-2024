@@ -1,20 +1,32 @@
 import { useState } from "react";
 import { getProductById } from "../services/ProductService";
 
-const ProductDetails = (props) => {
+const ProductDetails = () => {
 
     const [productId, setProductId] = useState('');
     const [product, setProduct] = useState('');
+    const [errorMessage, serErrorMessage] = useState('');
 
     const handleProductIdInput = (evt) => {
         console.log(evt.target.value);
-        // code here 
+        setProductId(evt.target.value);
+        evt.preventDefault();
     };
 
     const searchProductById = (evt) => {
-        console.log(productId);
-        // code here 
         evt.preventDefault();
+        console.log(productId);
+        getProductById(productId)
+            .then((response) => {
+                console.log(response);
+                setProduct(response.data);
+                serErrorMessage('');
+            })
+            .catch((error) => {
+                console.log(error);
+                serErrorMessage(error.response.data.message);
+                setProduct('');
+            });
     };
 
     return (
@@ -39,11 +51,16 @@ const ProductDetails = (props) => {
             </div>
             {product &&
                 <div>
-                    <p>{product.title}</p>
+                    <h2>{product.title}</h2>
                     <p>{product.description}</p>
                     <p>{product.price}</p>
+                    <img width={'25%'} src={product.thumbnail} alt="product thumbnail" />
                 </div>
             }
+            <div> {errorMessage &&
+                <p> {errorMessage} </p>
+            }
+            </div>
         </>
     );
 }

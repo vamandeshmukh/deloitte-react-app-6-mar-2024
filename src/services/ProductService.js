@@ -14,7 +14,7 @@ const getAllProducts = () => {
 
 const getProductById = (productId) => {
     console.log(productId);
-    axios.get(`${productUrl}/${productId}`);
+    return axios.get(`${productUrl}/${productId}`);
 };
 
 const addProduct = () => { };

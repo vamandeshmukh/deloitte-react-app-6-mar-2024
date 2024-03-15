@@ -3,6 +3,7 @@
 import Home from './components/Home';
 import Login from './components/Login';
 import MenuBar from './components/MenuBar';
+import ProductDetails from './components/ProductDetails';
 import ProductList from './components/ProductList';
 
 const App = () => {
@@ -14,7 +15,8 @@ const App = () => {
         <p>App Deloitte React App</p>
         {/* <Home></Home> */}
         {/* <Home /> */}
-        <ProductList />
+        {/* <ProductList /> */}
+        <ProductDetails />
         {/* <Login /> */}
       </div>
     </>
