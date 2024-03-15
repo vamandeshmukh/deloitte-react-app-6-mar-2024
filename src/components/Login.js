@@ -4,7 +4,7 @@ const Login = () => {
 
     const [loginData, setLoginData] = useState({ username: '', password: '' });
     const [loginMessage, setLoginMessage] = useState('');
-    const messageStyle = { color: 'blue', background: 'gray' };
+    const [messageStyle, setMessageStyle] = useState({ color: 'blue' });
 
     useEffect(() => {
         setLoginData(
@@ -20,10 +20,14 @@ const Login = () => {
 
     const submitLogin = (evt) => {
         console.log(loginData);
-        if (loginData.username === 'sonu' && loginData.password === 'sonu')
+        if (loginData.username === 'sonu' && loginData.password === 'sonu') {
             setLoginMessage(`${loginData.username} logged in successfully!`);
-        else
+            setMessageStyle({ color: 'green' });
+
+        } else {
             setLoginMessage('Invalid credentials.');
+            setMessageStyle({ color: 'red' });
+        }
         setLoginData({ username: '', password: '' }); // clear form
         evt.preventDefault(); // prevents page reload  
     };
@@ -43,7 +47,7 @@ const Login = () => {
             </form>
             {
                 loginMessage &&
-                <p>{loginMessage}</p>
+                <p style={messageStyle}>{loginMessage}</p>
             }
         </>
     );
