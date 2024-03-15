@@ -1,23 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProductDetails from "./ProductDetails";
 const ProductList = () => {
-    const parentData = 10.5;
-    const [childDataInParent, setChildDataInParent] = useState('');
-    const getDataFromChild = (data) => {
-        console.log(data);
-        setChildDataInParent(data);
-    };
+
+    const [products, setProducts] = useState('');
+
+    // useEffect(() =>{}, []);
+
+    useEffect(() => {
+
+        fetch('https://dummyjson.com/products')
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data.products);
+                setProducts(data.products);
+                console.log(products);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
     return (
         <>
             <h1>Product List - Parent Component </h1>
-            <p>Parent data in parent component: {parentData}</p>
-            <p>Child data in parent component: {childDataInParent}</p>
-            {/* <ProductDetails parentToChild={parentData} childToParent={getDataFromChild} /> */}
-            <ProductDetails parentToChild={parentData} />
+            <p>Product List</p>
+            {products &&
+                products.map((product) => {
+                    return <p>{product.title}</p>
+                })
+            }
+
+            <ProductDetails />
         </>
     );
 };
 export default ProductList;
+
+
+// import { useState } from "react";
+// import ProductDetails from "./ProductDetails";
+// const ProductList = () => {
+//     const parentData = 10.5;
+//     const [childDataInParent, setChildDataInParent] = useState('');
+//     const getDataFromChild = (data) => {
+//         console.log(data);
+//         setChildDataInParent(data);
+//     };
+//     return (
+//         <>
+//             <h1>Product List - Parent Component </h1>
+//             <p>Parent data in parent component: {parentData}</p>
+//             <p>Child data in parent component: {childDataInParent}</p>
+//             {/* <ProductDetails parentToChild={parentData} childToParent={getDataFromChild} /> */}
+//             <ProductDetails parentToChild={parentData} />
+//         </>
+//     );
+// };
+// export default ProductList;
 
 
 // import ProductDetails from "./ProductDetails";
