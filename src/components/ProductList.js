@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductDetails from "./ProductDetails";
 const ProductList = () => {
-    const parentData = 'Sonu';
+    const parentData = 10.5;
     const [childDataInParent, setChildDataInParent] = useState('');
     const getDataFromChild = (data) => {
         console.log(data);
@@ -9,10 +9,11 @@ const ProductList = () => {
     };
     return (
         <>
-            <h1>List of the Products - Parent Component </h1>
+            <h1>Product List - Parent Component </h1>
             <p>Parent data in parent component: {parentData}</p>
             <p>Child data in parent component: {childDataInParent}</p>
-            <ProductDetails parentToChild={parentData} childToParent={getDataFromChild} />
+            {/* <ProductDetails parentToChild={parentData} childToParent={getDataFromChild} /> */}
+            <ProductDetails parentToChild={parentData} />
         </>
     );
 };
@@ -97,3 +98,4 @@ export default ProductList;
 // };
 
 // export default ProductList;
+

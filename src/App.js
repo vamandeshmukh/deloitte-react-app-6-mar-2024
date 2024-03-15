@@ -14,8 +14,8 @@ const App = () => {
         <p>App Deloitte React App</p>
         {/* <Home></Home> */}
         {/* <Home /> */}
-        {/* <ProductList /> */}
-        <Login />
+        <ProductList />
+        {/* <Login /> */}
       </div>
     </>
   );

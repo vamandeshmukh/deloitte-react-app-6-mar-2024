@@ -1,3 +1,5 @@
+import PropTypes from 'react';
+
 const ProductDetails = (props) => {
     const childData = 'Monu';
     const parentDataInChild = props.parentToChild;
@@ -7,12 +9,18 @@ const ProductDetails = (props) => {
     };
     return (
         <>
-            <h1>ProductDetails - Child Component </h1>
+            <h1>Product Details - Child Component </h1>
             <p>Parent data in child component: {parentDataInChild}</p>
             <p>Child data in child component: {childData}</p>
             <button onClick={sendDataToParent}>Pass Data to Parent</button>
         </>
     );
+
+    ProductDetails.propTypes = {
+        parentToChild: PropTypes.string.isRequired,
+        anotherField: PropTypes.number.isRequired,
+        yetAnotherFiend: PropTypes.object.isRequired
+    };
 }
 export default ProductDetails;
 
@@ -45,4 +53,5 @@ export default ProductDetails;
 //     );
 // }
 // export default ProductDetails;
+
 
