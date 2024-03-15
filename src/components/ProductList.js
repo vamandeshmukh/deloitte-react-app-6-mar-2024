@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductDetails from "./ProductDetails";
-import axios from "axios";
+
+import { getAllProducts } from '../services/ProductService';
 
 const ProductList = () => {
 
@@ -8,11 +9,7 @@ const ProductList = () => {
 
     useEffect(() => {
 
-        // axios.get('url')
-        // .then((resp) => { handle response})
-        // .catch((err) => { handle error});
-
-        axios.get('https://dummyjson.com/products')
+        getAllProducts()
             .then((response) => {
                 console.log(response.data);
                 setProducts(response.data.products);
@@ -20,7 +17,7 @@ const ProductList = () => {
             .catch((error) => {
                 console.log(error);
             });
-            
+
     }, []);
     return (
         <>
