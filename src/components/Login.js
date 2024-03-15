@@ -12,12 +12,6 @@ const Login = () => {
         setLoginMessage('');
     }, []);
 
-    // const handleUsername = (evt) => {
-    //     console.log(evt.target.name);
-    //     console.log(evt.target.value);
-    //     setLoginData({ username: evt.target.value });
-    // };
-
     const handleLogin = (evt) => {
         console.log(evt.target.value);
         setLoginData({ ...loginData, [evt.target.name]: evt.target.value });
