@@ -6,6 +6,16 @@ const ProductDetails = (props) => {
     const [productId, setProductId] = useState('');
     const [product, setProduct] = useState('');
 
+    const handleProductIdInput = (evt) => {
+        console.log(evt.target.value);
+        // code here 
+    };
+
+    const searchProductById = (evt) => { };
+    console.log(productId);
+    // code here 
+    evt.preventDefault();
+
     return (
         <>
             <h1>Product Details - Child Component </h1>
