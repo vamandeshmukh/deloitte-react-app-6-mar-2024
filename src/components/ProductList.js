@@ -4,8 +4,6 @@ const ProductList = () => {
 
     const [products, setProducts] = useState('');
 
-    // useEffect(() =>{}, []);
-
     useEffect(() => {
 
         fetch('https://dummyjson.com/products')
@@ -25,10 +23,9 @@ const ProductList = () => {
             <p>Product List</p>
             {products &&
                 products.map((product) => {
-                    return <p>{product.title}</p>
+                    return <p key={product.id}>{product.title}</p>
                 })
             }
-
             <ProductDetails />
         </>
     );
