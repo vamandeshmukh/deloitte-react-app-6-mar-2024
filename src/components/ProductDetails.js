@@ -20,6 +20,23 @@ const ProductDetails = (props) => {
     return (
         <>
             <h1>Product Details - Child Component </h1>
+            <div>
+                <form onSubmit={searchProductById}>
+                    <input
+                        type="number"
+                        name="productId"
+                        value={productId}
+                        onChange={handleProductIdInput}
+                        placeholder="Enter product id"
+                        autoFocus
+                        required
+                    />
+                    <input
+                        type="submit"
+                        value="Search"
+                    />
+                </form>
+            </div>
             {product &&
                 <div>
                     <p>{product.title}</p>
