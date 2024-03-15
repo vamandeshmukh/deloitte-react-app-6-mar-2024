@@ -1,21 +1,18 @@
 import { useState, useEffect } from "react";
 import ProductDetails from "./ProductDetails";
+import axios from "axios";
+
 const ProductList = () => {
 
     const [products, setProducts] = useState('');
 
     useEffect(() => {
 
-        fetch('https://dummyjson.com/products')
-            .then(response => response.json())
-            .then((data) => {
-                console.log(data.products);
-                setProducts(data.products);
-                console.log(products);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
+        // axios.get('url')
+        // .then((resp) => { handle response})
+        // .catch((err) => { handle error});
+
+
     }, []);
     return (
         <>
