@@ -1,14 +1,32 @@
+import { useEffect, useState } from "react";
+
 const Login = () => {
 
-    
+    const [loginData, setLoginData] = useState();
+    const [loginMessage, setLoginMessage] = useState();
+
+    useEffect(() => {
+        setLoginData(
+            { username: '', password: '' }
+        );
+        setLoginMessage = '';
+    }, []);
+
+
+    const submitLogin = () => { };
 
     return (
         <>
             <h1>Login Component</h1>
 
-            <form>
-
+            <form onSubmit={submitLogin}>
+                <input type="text" name="username" value={''} onChange={''} />
+                <input type="password" name="password" value={''} onChange={''} />
+                <input type="submit" value="Login" />
             </form>
+            {loginMessage &&
+                <p>{loginMessage}</p>
+            }
         </>
     );
 }
