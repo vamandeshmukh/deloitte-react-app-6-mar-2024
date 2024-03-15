@@ -9,7 +9,7 @@ const Login = () => {
         setLoginData(
             { username: '', password: '' }
         );
-        setLoginMessage = '';
+        setLoginMessage('');
     }, []);
 
     const submitLogin = () => { };
@@ -19,7 +19,9 @@ const Login = () => {
             <h1>Login Component</h1>
             <form onSubmit={submitLogin}>
                 <input type="text" name="username" value={''} onChange={''} />
+                <br />
                 <input type="password" name="password" value={''} onChange={''} />
+                <br />
                 <input type="submit" value="Login" />
             </form>
             {loginMessage &&
