@@ -27,6 +27,7 @@ const ProductDetails = () => {
                 serErrorMessage(error.response.data.message);
                 setProduct('');
             });
+        setProductId('');
     };
 
     return (
