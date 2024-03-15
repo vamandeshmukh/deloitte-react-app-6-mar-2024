@@ -4,7 +4,7 @@ const Login = () => {
 
     const [loginData, setLoginData] = useState({ username: '', password: '' });
     const [loginMessage, setLoginMessage] = useState('');
-    const messageStyle = '';
+    const messageStyle = { color: 'blue', background: 'gray' };
 
     useEffect(() => {
         setLoginData(
@@ -31,8 +31,9 @@ const Login = () => {
     return (
         <>
             {/* <h1 style="color: blue;">Login Component</h1> */}
-            <h1 style={{ color: 'blue' }}>Login Component</h1 >
-            <h1 style={{ color: 'blue', background: 'yellow' }}>Login Component</h1 >
+            {/* <h1 style={{ color: 'blue', background: 'yellow' }}>Login Component</h1 > */}
+            {/* <h1 style={{ color: 'blue' }}>Login Component</h1 > */}
+            <h1 style={messageStyle}>Login Component</h1 >
             <form onSubmit={submitLogin}>
                 <input type="text" name="username" value={loginData.username} onChange={handleLogin} />
                 <br />
