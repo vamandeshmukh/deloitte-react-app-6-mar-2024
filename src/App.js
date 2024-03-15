@@ -1,5 +1,6 @@
 
 // function omponent 
+import CompConcepts from './components/CompConcepts';
 import Home from './components/Home';
 import Login from './components/Login';
 import MenuBar from './components/MenuBar';
@@ -16,8 +17,9 @@ const App = () => {
         {/* <Home></Home> */}
         {/* <Home /> */}
         {/* <ProductList /> */}
-        <ProductDetails />
+        {/* <ProductDetails /> */}
         {/* <Login /> */}
+        <CompConcepts />
       </div>
     </>
   );
