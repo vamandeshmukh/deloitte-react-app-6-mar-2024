@@ -37,6 +37,121 @@ state - holds all the data of a component
 props - 
 ----- 
 
+# Important Links 
+
+ReactJS learning links 
+----------------------
+ 
+Introduction to all basics: 
+https://react.dev/learn
+
+V-Dom architecture 
+Reconciliation
+
+Environment setup 
+CRA setup / Creating new application 
+https://create-react-app.dev/docs/getting-started/ 
+
+React devtools: 
+https://react.dev/learn/react-developer-tools 
+
+Understanding folder structure
+https://create-react-app.dev/docs/folder-structure 
+
+JSX 
+Introduction to JSX and its syntax
+https://react.dev/learn/writing-markup-with-jsx 
+
+Components: 
+Class Components 
+https://react.dev/reference/react/Component#defining-a-class-component
+
+state: 
+https://react.dev/learn/state-a-components-memory
+
+props: 
+https://react.dev/learn/passing-props-to-a-component 
+
+Reusability concept
+https://react.dev/learn/importing-and-exporting-components
+
+Breaking down component responsibilities
+
+Components: Design Pattern 
+Atomic Designing in React
+ https://medium.com/@janelle.wg/atomic-design-pattern-how-to-structure-your-react-application-2bb4d9ca5f97
+
+Component Communication 
+Component communication using props, Parent-child communication
+https://react.dev/learn/passing-props-to-a-component
+
+Event Handling 
+Introduction, Syntax, and Passing Arguments to Event Handlers
+https://react.dev/learn/responding-to-events
+
+Styling 
+Syntax and Dynamically computed styles at render time
+https://react.dev/reference/react/useInsertionEffect#injecting-dynamic-styles-from-css-in-js-libraries 
+
+Components Conditional rendering
+https://react.dev/learn/conditional-rendering 
+
+Components (Cont.) 
+Working with loops 
+https://react.dev/reference/react/Children#children-map
+
+prop validations and default props, State, 
+https://react.dev/reference/react/Component#static-proptypes
+
+Functional components
+https://react.dev/reference/react/Component 
+
+API Calls 
+Using axios
+
+Lifecycle hooks 
+Lifecycle hooks, Component Phases, componentDidMount
+https://react.dev/learn/lifecycle-of-reactive-effects#the-lifecycle-of-an-effect
+
+Component vs. Pure Component 
+Component vs. Pure Component
+https://react.dev/reference/react/PureComponent#purecomponent 
+
+Controlled vs. Uncontrolled component 
+Forms
+
+Wrapper Components 
+Wrapper Components
+
+Context API 
+Context API
+
+React hooks 
+Introducing react hooks, useState and useEffect concepts, Creating/Providing/Consuming context
+
+React router 
+Router and Route, Route/URL Params
+
+Flux 
+Introduction to flux pattern, Basic flux architecture, Explaining uni-directional data flow
+
+Redux 
+Overview, Creating actions, Creating reducer, Store setup, Connecting component to store, Cart implementation using redux, Redux middlewares
+Router Login example, Protected routes
+
+Error Handling 
+componetDidCatch
+https://react.dev/reference/react/Component#componentdidcatch
+
+Lazy and suspense 
+Lazy and suspense
+https://react.dev/reference/react/lazy#suspense-for-code-splitting
+
+Build 
+Build
+
+
+
 
 --------------------------------------
 
