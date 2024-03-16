@@ -118,28 +118,42 @@ Component vs. Pure Component
 https://react.dev/reference/react/PureComponent#purecomponent 
 
 Controlled vs. Uncontrolled component 
+https://react.dev/learn/sharing-state-between-components#controlled-and-uncontrolled-components 
+
 Forms
+https://react.dev/reference/react-dom/components/form#noun-labs-1201738-(2) 
 
 Wrapper Components 
 Wrapper Components
+https://react.dev/reference/react-dom/findDOMNode#adding-a-wrapper-div-element 
 
 Context API 
 Context API
+https://react.dev/reference/react/hooks#context-hooks 
 
 React hooks 
 Introducing react hooks, useState and useEffect concepts, Creating/Providing/Consuming context
+https://react.dev/reference/react/hooks
+https://react.dev/reference/react/useState
 
 React router 
 Router and Route, Route/URL Params
+https://reactrouter.com/en/main/start/tutorial
 
 Flux 
 Introduction to flux pattern, Basic flux architecture, Explaining uni-directional data flow
+https://facebookarchive.github.io/flux/docs/overview 
 
 Redux 
 Overview, Creating actions, Creating reducer, Store setup, Connecting component to store, Cart implementation using redux, Redux middlewares
+https://redux.js.org/ 
+
 Router Login example, Protected routes
+https://dev.to/collins87mbathi/reactjs-protected-route-m3j 
 
 Error Handling 
+https://react.dev/reference/react-dom/components/form#handling-form-submission-errors 
+
 componetDidCatch
 https://react.dev/reference/react/Component#componentdidcatch
 
