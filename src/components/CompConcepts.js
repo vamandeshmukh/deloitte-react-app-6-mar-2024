@@ -1,16 +1,30 @@
-import BootstrapLearning from "./BootstrapLearning";
 
 const CompConcepts = () => {
 
     return (
         <>
-            <p>Lifecycle Hooks Concepts</p>
-            <BootstrapLearning />
+            <p>Context API Concepts</p>
+            
         </>
     );
 }
 
 export default CompConcepts;
+
+
+// import BootstrapLearning from "./BootstrapLearning";
+
+// const CompConcepts = () => {
+
+//     return (
+//         <>
+//             <p>Lifecycle Hooks Concepts</p>
+//             <BootstrapLearning />
+//         </>
+//     );
+// }
+
+// export default CompConcepts;
 
 
 

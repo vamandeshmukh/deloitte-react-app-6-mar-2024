@@ -5,7 +5,7 @@ const MenuBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="home" >
+                <Link className="navbar-brand" to="" >
                     <img height="20px" title="Home"
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Deloitte-logo-black.svg/1280px-Deloitte-logo-black.svg.png"
                         alt="deloitte logo" />
