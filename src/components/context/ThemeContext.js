@@ -6,8 +6,6 @@ import { createContext, useState, useContext } from "react";
 
 const ThemeContext = createContext();
 
-// Theme provider 
-// ============== 
 export const ThemeProvider = ({ children }) => {
 
   console.log('ThemeProvider');
@@ -16,8 +14,8 @@ export const ThemeProvider = ({ children }) => {
 
   const changeTheme = () => {
     console.log('changeTheme');
-    setTheme((thm) => {
-      if (thm === 'light')
+    setTheme((currentTheme) => {
+      if (currentTheme === 'light')
         return 'dark'
       else
         return 'light'
@@ -30,10 +28,6 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
-
-// Use Theme 
-// ========= 
-
 
 export const useTheme = () => {
 
