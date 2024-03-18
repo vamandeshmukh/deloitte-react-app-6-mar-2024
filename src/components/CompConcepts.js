@@ -9,8 +9,8 @@ const CompConcepts = () => {
             <p>Context API Concepts</p>
             <ThemeProvider>
                 <p>Some text</p>
-                <ThemeButton />
                 <ThemedComponent />
+                <ThemeButton />
             </ThemeProvider>
         </>
     );
