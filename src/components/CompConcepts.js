@@ -1,10 +1,17 @@
+import ThemeButton from "./context/ThemeButton";
+import { ThemeProvider } from "./context/ThemeContext";
+import ThemedComponent from "./context/ThemedComponent";
 
 const CompConcepts = () => {
 
     return (
         <>
             <p>Context API Concepts</p>
-            
+            <ThemeProvider>
+                <p>Some text</p>
+                <ThemeButton />
+                <ThemedComponent />
+            </ThemeProvider>
         </>
     );
 }

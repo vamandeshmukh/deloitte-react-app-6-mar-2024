@@ -1,9 +1,15 @@
+import { useTheme } from "./ThemeContext";
+
 
 const ThemedComponent = () => {
+
+    const { theme } = useTheme();
+
     return (
-        <>
-            <p>Themed Component</p>
-        </>
+        // <div style={{ color: theme }}>
+        <div style={{ color: theme === 'light' ? 'dark' : 'white', background: 'white' }}>
+        </div>
+
     );
 };
 
