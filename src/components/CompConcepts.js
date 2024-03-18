@@ -1,11 +1,11 @@
-import Lifecycle from "./LifeCycle";
+import Life from "./Life";
 
 const CompConcepts = () => {
 
     return (
         <>
             <h1>Lifecycle Hooks Concepts</h1>
-            <Lifecycle />
+            <Life />
         </>
     );
 }
