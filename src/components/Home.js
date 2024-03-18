@@ -1,36 +1,74 @@
-const Home = () => {
+import { Link } from "react-router-dom";
 
-    const friends = [
-        { firstName: 'Sonu', lastName: 'Joshi' },
-        { firstName: 'Monu', lastName: 'Singh' },
-        { firstName: 'Tonu', lastName: 'Reddy' },
-        { firstName: 'Ponu', lastName: 'Pande' }
-    ];
+const Home = () => {
 
     return (
         <>
-            <h1>Home Component</h1>
-            <p>Home component</p>
-            {(friends.length > 0) &&
-                <div>
-                    <h3>My Friends: </h3>
-                    {friends.map((friend) => {
-                        return (
-                            <div key={friend.firstName} >
-                                <p>
-                                    <span> {friend.firstName}</span>
-                                    <span> {friend.lastName}</span>
-                                </p>
-                            </div>
-                        )
-                    })}
-                </div >
-            }
-        </>
+            <div style={{ minHeight: "100vh" }}>
+                <div style={{ minHeight: "100vh" }} className="row">
+                    <div className="col">
+                        <img width="100%" src="https://clipart-library.com/images_k/shopping-transparent-background/shopping-transparent-background-12.png" alt="shopping" />
+                    </div>
+                    <div className="col">
+                        <Link className="lead text-primary align-bottom" style={{ textDecoration: 'none' }} to='/product-list'>Start shopping...</Link>
+                    </div>
+                </div>
+            </div>
+        </ >
     );
-}
-
+};
 export default Home;
+
+
+
+
+// const Home = () => {
+
+
+//     return (
+//         <>
+//             <div>
+//             </div>
+//         </>
+//     );
+// }
+
+// export default Home;
+
+
+// const Home = () => {
+
+//     const friends = [
+//         { firstName: 'Sonu', lastName: 'Joshi' },
+//         { firstName: 'Monu', lastName: 'Singh' },
+//         { firstName: 'Tonu', lastName: 'Reddy' },
+//         { firstName: 'Ponu', lastName: 'Pande' }
+//     ];
+
+//     return (
+//         <>
+//             <h1>Home Component</h1>
+//             <p>Home component</p>
+//             {(friends.length > 0) &&
+//                 <div>
+//                     <h3>My Friends: </h3>
+//                     {friends.map((friend) => {
+//                         return (
+//                             <div key={friend.firstName} >
+//                                 <p>
+//                                     <span> {friend.firstName}</span>
+//                                     <span> {friend.lastName}</span>
+//                                 </p>
+//                             </div>
+//                         )
+//                     })}
+//                 </div >
+//             }
+//         </>
+//     );
+// }
+
+// export default Home;
 
 
 // const Home = () => {
