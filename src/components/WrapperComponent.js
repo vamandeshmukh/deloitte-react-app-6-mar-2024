@@ -1,11 +1,9 @@
 
-const WrapperComponent = (props) => {
-
+const WrapperComponent = ({ children }) => {
 
     return (
-        <div style={{ color: 'blue' }} >
-            <p>Wrapper</p>
-            {props.childern}
+        <div style={{color: 'blue'}} >
+            {children}
         </div>
 
     );

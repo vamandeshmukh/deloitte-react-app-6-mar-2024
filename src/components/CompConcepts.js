@@ -7,7 +7,7 @@ const CompConcepts = () => {
         <>
             <h1>Wrapper Component Concepts</h1>
             <WrapperComponent>
-                This is an example of wrapper compoment.
+                <p>This is an example of wrapper compoment.</p>
             </WrapperComponent>
         </>
     );
