@@ -32,11 +32,6 @@ const ProductDetails = () => {
 
     return (
         <>
-            <p>Product Details</p>
-            <p className="display-1 text-primary">Product Details</p>
-            <p className="display-2 text-primary">Product Details</p>
-            <p className="display-3 text-primary">Product Details</p>
-            <p className="display-4 text-primary">Product Details</p>
             <p className="display-5 text-primary">Product Details</p>
             <div>
                 <form onSubmit={searchProductById}>
@@ -56,9 +51,9 @@ const ProductDetails = () => {
                 </form>
             </div>
             {product &&
-                <div  >
+                <div className="mx-3 my-3 px-3 py-3 shadow rounded" >
                     <h2>{product.title}</h2>
-                    <p>{product.description}</p>
+                    <p>{product.description} {product.description}</p>
                     <p>{product.price}</p>
                     <img width={'25%'} src={product.thumbnail} alt="product thumbnail" />
                 </div>

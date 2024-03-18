@@ -1,11 +1,11 @@
-import Life from "./Life";
+import BootstrapLearning from "./BootstrapLearning";
 
 const CompConcepts = () => {
 
     return (
         <>
-            <h1>Lifecycle Hooks Concepts</h1>
-            <Life />
+            <p>Lifecycle Hooks Concepts</p>
+            <BootstrapLearning />
         </>
     );
 }
