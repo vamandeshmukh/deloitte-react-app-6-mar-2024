@@ -1,9 +1,12 @@
 import AppRoutes from './components/AppRoutes';
+import './App.css';
 
 const App = () => {
   return (
     <>
-      <AppRoutes />
+      <div>
+        <AppRoutes />
+      </div>
     </>
   );
 }

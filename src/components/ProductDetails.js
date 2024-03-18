@@ -32,7 +32,12 @@ const ProductDetails = () => {
 
     return (
         <>
-            <h1>Product Details - Child Component </h1>
+            <p>Product Details</p>
+            <p className="display-1 text-primary">Product Details</p>
+            <p className="display-2 text-primary">Product Details</p>
+            <p className="display-3 text-primary">Product Details</p>
+            <p className="display-4 text-primary">Product Details</p>
+            <p className="display-5 text-primary">Product Details</p>
             <div>
                 <form onSubmit={searchProductById}>
                     <input
@@ -51,7 +56,7 @@ const ProductDetails = () => {
                 </form>
             </div>
             {product &&
-                <div>
+                <div  >
                     <h2>{product.title}</h2>
                     <p>{product.description}</p>
                     <p>{product.price}</p>
