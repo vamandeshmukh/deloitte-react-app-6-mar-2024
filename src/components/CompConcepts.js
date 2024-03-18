@@ -1,19 +1,34 @@
-import WrapperComponent from "./WrapperComponent";
+import Lifecycle from "./LifeCycle";
 
 const CompConcepts = () => {
 
-
     return (
         <>
-            <h1>Wrapper Component Concepts</h1>
-            <WrapperComponent>
-                <p>This is an example of wrapper compoment.</p>
-            </WrapperComponent>
+            <h1>Lifecycle Hooks Concepts</h1>
+            <Lifecycle />
         </>
     );
 }
 
 export default CompConcepts;
+
+
+
+// import WrapperComponent from "./WrapperComponent";
+// const CompConcepts = () => {
+
+
+//     return (
+//         <>
+//             <h1>Wrapper Component Concepts</h1>
+//             <WrapperComponent>
+//                 <p>This is an example of wrapper compoment.</p>
+//             </WrapperComponent>
+//         </>
+//     );
+// }
+
+// export default CompConcepts;
 
 
 // import { useState } from "react";
