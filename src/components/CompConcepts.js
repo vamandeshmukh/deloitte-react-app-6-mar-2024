@@ -1,9 +1,14 @@
+import WrapperComponent from "./WrapperComponent";
+
 const CompConcepts = () => {
 
 
     return (
         <>
             <h1>Wrapper Component Concepts</h1>
+            <WrapperComponent>
+                This is an example of wrapper compoment.
+            </WrapperComponent>
         </>
     );
 }
@@ -13,7 +18,7 @@ export default CompConcepts;
 
 // import { useState } from "react";
 
-// // controlled component 
+// // controlled component
 // const CompConcepts = () => {
 
 //     const [productId, setProductId] = useState('');
