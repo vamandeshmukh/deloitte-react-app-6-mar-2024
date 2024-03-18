@@ -1,13 +1,9 @@
 import AppRoutes from './components/AppRoutes';
-import MenuBar from './components/MenuBar';
 
 const App = () => {
   return (
     <>
-      {/* <MenuBar /> */}
-      <div className='container py-3'>
-        <AppRoutes />
-      </div>
+      <AppRoutes />
     </>
   );
 }
