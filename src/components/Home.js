@@ -10,7 +10,7 @@ const Home = () => {
                         <img width="100%" src="https://clipart-library.com/images_k/shopping-transparent-background/shopping-transparent-background-12.png" alt="shopping" />
                     </div>
                     <div className="col">
-                        <Link className="lead text-primary align-bottom" style={{ textDecoration: 'none' }} to='/product-list'>Start shopping...</Link>
+                        <Link className="lead text-primary" style={{ textDecoration: 'none' }} to='/product-list'>Start shopping...</Link>
                     </div>
                 </div>
             </div>
