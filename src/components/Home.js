@@ -4,12 +4,12 @@ const Home = () => {
 
     return (
         <>
-            <div className="row">
+            <div className="row d-flex align-items-center">
                 <div className="col">
                     <img width="100%" src="https://clipart-library.com/images_k/shopping-transparent-background/shopping-transparent-background-12.png" alt="shopping" />
                 </div>
                 <div className="col">
-                    <Link to="/product-list" className="lead text-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Start shopping...</Link>
+                    <Link to="/product-list" className="display-4 text-primary link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Start shopping...</Link>
                 </div>
             </div>
         </ >
