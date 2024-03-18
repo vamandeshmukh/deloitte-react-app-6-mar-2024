@@ -1,30 +1,45 @@
-
-// function omponent 
-import CompConcepts from './components/CompConcepts';
-import Home from './components/Home';
-import Login from './components/Login';
+import AppRoutes from './components/AppRoutes';
 import MenuBar from './components/MenuBar';
-import ProductDetails from './components/ProductDetails';
-import ProductList from './components/ProductList';
 
 const App = () => {
   return (
     <>
-      <MenuBar />
-      <div className="container py-3">
-        <h1>App Component</h1>
-        <p>App Deloitte React App</p>
-        {/* <Home></Home> */}
-        {/* <Home /> */}
-        {/* <ProductList /> */}
-        {/* <ProductDetails /> */}
-        {/* <Login /> */}
-        <CompConcepts />
+      {/* <MenuBar /> */}
+      <div className='container py-3'>
+        <AppRoutes />
       </div>
     </>
   );
 }
 export default App;
+
+
+// // function omponent 
+// import CompConcepts from './components/CompConcepts';
+// import Home from './components/Home';
+// import Login from './components/Login';
+// import MenuBar from './components/MenuBar';
+// import ProductDetails from './components/ProductDetails';
+// import ProductList from './components/ProductList';
+
+// const App = () => {
+//   return (
+//     <>
+//       <MenuBar />
+//       <div className="container py-3">
+//         <h1>App Component</h1>
+//         <p>App Deloitte React App</p>
+//         {/* <Home></Home> */}
+//         {/* <Home /> */}
+//         {/* <ProductList /> */}
+//         {/* <ProductDetails /> */}
+//         {/* <Login /> */}
+//         <CompConcepts />
+//       </div>
+//     </>
+//   );
+// }
+// export default App;
 
 // // class component 
 
