@@ -6,6 +6,9 @@ const MenuBar = () => {
         <nav>
             <ul>
                 <li>
+                    <Link to='learning' >Learning</Link>
+                </li>
+                <li>
                     <Link to='home' >Home</Link>
                 </li>
                 <li>

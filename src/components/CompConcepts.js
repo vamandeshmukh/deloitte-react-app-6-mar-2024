@@ -1,3 +1,16 @@
+const CompConcepts = () => {
+
+
+    return (
+        <>
+            <h1>Wrapper Component Concepts</h1>
+        </>
+    );
+}
+
+export default CompConcepts;
+
+
 // import { useState } from "react";
 
 // // controlled component 
@@ -35,39 +48,39 @@
 
 // export default CompConcepts;
 
-import { useRef } from "react";
+// import { useRef } from "react";
 
-// uncontrolled component 
-const CompConcepts = () => {
+// uncontrolled component
+// const CompConcepts = () => {
 
-    const inputRef = useRef('');
+//     const inputRef = useRef('');
 
-    const handleSubmit = (evt) => {
-        evt.preventDefault();
-        const productId = inputRef.current.value;
-        console.log(productId);
-    };
+//     const handleSubmit = (evt) => {
+//         evt.preventDefault();
+//         const productId = inputRef.current.value;
+//         console.log(productId);
+//     };
 
-    return (
-        <>
-            <h1>Component Concepts</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                        type="text"
-                        name="productId"
-                        ref={inputRef}
-                        placeholder="Enter product id"
-                        autoFocus
-                        required
-                    />
-                </div>
-                <div>
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </>
-    );
-}
+//     return (
+//         <>
+//             <h1>Component Concepts</h1>
+//             <form onSubmit={handleSubmit}>
+//                 <div>
+//                     <input
+//                         type="text"
+//                         name="productId"
+//                         ref={inputRef}
+//                         placeholder="Enter product id"
+//                         autoFocus
+//                         required
+//                     />
+//                 </div>
+//                 <div>
+//                     <button type="submit">Submit</button>
+//                 </div>
+//             </form>
+//         </>
+//     );
+// }
 
-export default CompConcepts;
+// export default CompConcepts;

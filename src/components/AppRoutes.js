@@ -6,6 +6,8 @@ import ProductList from './ProductList';
 import Page404 from './Page404';
 import MenuBar from './MenuBar';
 
+import CompConcepts from './CompConcepts';
+
 const AppRoutes = () => {
     return (
         <>
@@ -15,6 +17,7 @@ const AppRoutes = () => {
                 </>
                 <div className='container'>
                     <Routes >
+                        <Route exact path='learning' element={<CompConcepts />} />
                         <Route exact path='home' element={<Home />} />
                         <Route exact path='login' element={<Login />} />
                         <Route exact path='product-details' element={<ProductDetails />} />
