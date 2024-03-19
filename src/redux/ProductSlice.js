@@ -28,7 +28,8 @@ console.log('ProductSlice');
 const ProductSlice = createSlice({
     name: 'productList',
     initialState: {
-        productListObj: []
+        productListObj: [],
+        anotherObj: {}
     },
     reducers: {
         setProductListObj: (state, action) => {

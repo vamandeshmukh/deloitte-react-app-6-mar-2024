@@ -4,18 +4,16 @@ import { useState, useEffect } from "react";
 import { getAllProducts } from '../services/ProductService';
 import { Link } from "react-router-dom";
 
-// imports related to redux 
 import { setProductListObj } from '../redux/ProductSlice';
 import { useDispatch, useSelector } from "react-redux";
 
 const ProductList = () => {
 
+    const dispatch = useDispatch();
+
     const [products, setProducts] = useState('');
 
-    // const productListDataFromStore = useSelector();
-    // const productListDataFromStore = useSelector(() => {});
-    // const productListDataFromStore = useSelector((store) => { return store.productList.productListObj; });
-    const productListDataFromStore = useSelector(abc => abc.productList.productListObj);
+    const productListDataFromStore = useSelector(store => store.productList.productListObj);
 
     useEffect(() => {
 
@@ -23,16 +21,17 @@ const ProductList = () => {
             .then((response) => {
                 console.log(response.data);
                 setProducts(response.data.products);
+                dispatch(setProductListObj(response.data.products));
             })
             .catch((error) => {
                 console.log(error);
             });
 
-    }, []);
+    }, [productListDataFromStore]);
     return (
         <>
             <h1>Product List </h1>
-            <p> {productListDataFromStore && productListDataFromStore.length} </p>
+            <p> {productListDataFromStore.length} </p>
             {products &&
                 products.map((product) => {
                     return <div key={product.id}>
@@ -44,6 +43,54 @@ const ProductList = () => {
     );
 };
 export default ProductList;
+
+
+// // https://dummyjson.com/products?limit=10&skip=0
+
+// import { useState, useEffect } from "react";
+// import { getAllProducts } from '../services/ProductService';
+// import { Link } from "react-router-dom";
+
+// // imports related to redux
+// import { setProductListObj } from '../redux/ProductSlice';
+// import { useDispatch, useSelector } from "react-redux";
+
+// const ProductList = () => {
+
+//     const [products, setProducts] = useState('');
+
+//     // const productListDataFromStore = useSelector();
+//     // const productListDataFromStore = useSelector(() => {});
+//     // const productListDataFromStore = useSelector((store) => { return store.productList.productListObj; });
+//     const productListDataFromStore = useSelector(abc => abc.productList.productListObj);
+
+//     useEffect(() => {
+
+//         getAllProducts()
+//             .then((response) => {
+//                 console.log(response.data);
+//                 setProducts(response.data.products);
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+
+//     }, []);
+//     return (
+//         <>
+//             <h1>Product List </h1>
+//             <p> {productListDataFromStore && productListDataFromStore.length} </p>
+//             {products &&
+//                 products.map((product) => {
+//                     return <div key={product.id}>
+//                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
+//                     </div>
+//                 })
+//             }
+//         </>
+//     );
+// };
+// export default ProductList;
 
 
 // // https://dummyjson.com/products?limit=10&skip=0
