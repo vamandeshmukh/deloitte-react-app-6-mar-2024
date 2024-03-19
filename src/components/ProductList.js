@@ -1,6 +1,6 @@
 // https://dummyjson.com/products?limit=10&skip=0
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { getAllProducts } from '../services/ProductService';
 import { Link } from "react-router-dom";
 
@@ -11,16 +11,13 @@ const ProductList = () => {
 
     const dispatch = useDispatch();
 
-    const [products, setProducts] = useState('');
-
-    const productListDataFromStore = useSelector(store => store.productList.productListObj);
+    const productListData = useSelector(store => store.productList.productListObj);
 
     useEffect(() => {
 
         getAllProducts()
             .then((response) => {
                 console.log(response.data);
-                setProducts(response.data.products);
                 dispatch(setProductListObj(response.data.products));
             })
             .catch((error) => {
@@ -31,7 +28,7 @@ const ProductList = () => {
     return (
         <>
             <h1>Product List </h1>
-            <p> {productListDataFromStore.length} </p>
+            <p> {productListData.length} </p>
             {/* {products &&
                 products.map((product) => {
                     return <div key={product.id}>
@@ -39,8 +36,8 @@ const ProductList = () => {
                     </div>
                 })
             } */}
-            {productListDataFromStore &&
-                productListDataFromStore.map((product) => {
+            {productListData &&
+                productListData.map((product) => {
                     return <div key={product.id}>
                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
                     </div>

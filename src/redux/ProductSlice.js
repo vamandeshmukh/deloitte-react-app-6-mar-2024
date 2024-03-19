@@ -33,7 +33,6 @@ const ProductSlice = createSlice({
     },
     reducers: {
         setProductListObj: (state, action) => {
-            console.log(state);
             console.log(action);
             state.productListObj = action.payload; // payload = data coming from the component 
         }
