@@ -1,7 +1,7 @@
 import { useState } from "react";
-import ThemeButton from "./context/ThemeButton";
-import { ThemeProvider } from "./context/ThemeContext";
-import ThemedComponent from "./context/ThemedComponent";
+import ThemeButton from "../context/ThemeButton";
+import { ThemeProvider } from "../context/ThemeContext";
+import ThemedComponent from "../context/ThemedComponent";
 
 const CompConcepts = () => {
 
