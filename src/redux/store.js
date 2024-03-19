@@ -14,6 +14,7 @@
 // slice == 
 
 import { configureStore } from "@reduxjs/toolkit";
+import ProductReducer from "./ProductSlice";
 
 // const store = configureStore({});
 
@@ -21,8 +22,11 @@ import { configureStore } from "@reduxjs/toolkit";
 //     reducer : {}
 // });
 
+console.log('store');
+
 const store = configureStore({
     reducer: {
+        poductList: ProductReducer
         // anyComponent: AnyComponentReducer
     }
 });
