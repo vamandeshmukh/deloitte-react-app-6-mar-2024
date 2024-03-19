@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ProductDetails from "./ProductDetails";
 
 import { getAllProducts } from '../services/ProductService';
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
 
@@ -21,11 +22,12 @@ const ProductList = () => {
     }, []);
     return (
         <>
-            <h1>Product List - Parent Component </h1>
-            <p>Product List</p>
+            <h1>Product List </h1>
             {products &&
                 products.map((product) => {
-                    return <p key={product.id}>{product.title}</p>
+                    return <div>
+                        <Link to='/product-details'>{product.title}</Link>
+                    </div>
                 })
             }
             <ProductDetails />
@@ -33,6 +35,43 @@ const ProductList = () => {
     );
 };
 export default ProductList;
+
+
+// import { useState, useEffect } from "react";
+// import ProductDetails from "./ProductDetails";
+
+// import { getAllProducts } from '../services/ProductService';
+
+// const ProductList = () => {
+
+//     const [products, setProducts] = useState('');
+
+//     useEffect(() => {
+
+//         getAllProducts()
+//             .then((response) => {
+//                 console.log(response.data);
+//                 setProducts(response.data.products);
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+
+//     }, []);
+//     return (
+//         <>
+//             <h1>Product List - Parent Component </h1>
+//             <p>Product List</p>
+//             {products &&
+//                 products.map((product) => {
+//                     return <p key={product.id}>{product.title}</p>
+//                 })
+//             }
+//             <ProductDetails />
+//         </>
+//     );
+// };
+// export default ProductList;
 
 
 // import { useState } from "react";

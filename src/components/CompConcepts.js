@@ -1,8 +1,12 @@
+import { useState } from "react";
 import ThemeButton from "./context/ThemeButton";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemedComponent from "./context/ThemedComponent";
 
 const CompConcepts = () => {
+
+    // let someData =  'abc'; // 'def' 
+    const [someData, setSomeData] = useState('abc'); // 'def'
 
     return (
         <>
