@@ -10,7 +10,20 @@
 // 4. send data to store 
 // 5. Wherever needed, access data from the store 
 
-const store = '';
+import { configureStore } from "@reduxjs/toolkit";
+
+// const store = configureStore({});
+
+// const store = configureStore({
+//     reducer : {}
+// });
+
+const store = configureStore({
+    reducer: {
+        // anyComponent: AnyComponentReducer
+    }
+});
 
 export default store;
+
 
