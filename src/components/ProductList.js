@@ -27,18 +27,26 @@ const ProductList = () => {
                 console.log(error);
             });
 
-    }, [productListDataFromStore]);
+    }, []);
     return (
         <>
             <h1>Product List </h1>
             <p> {productListDataFromStore.length} </p>
-            {products &&
+            {/* {products &&
                 products.map((product) => {
                     return <div key={product.id}>
                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
                     </div>
                 })
+            } */}
+            {productListDataFromStore &&
+                productListDataFromStore.map((product) => {
+                    return <div key={product.id}>
+                        <Link to={`/product-details/${product.id}`}>{product.title}</Link>
+                    </div>
+                })
             }
+
         </>
     );
 };
