@@ -10,6 +10,9 @@
 // 4. send data to store 
 // 5. Wherever needed, access data from the store 
 
+// reducer ==  
+// slice == 
+
 import { configureStore } from "@reduxjs/toolkit";
 
 // const store = configureStore({});
