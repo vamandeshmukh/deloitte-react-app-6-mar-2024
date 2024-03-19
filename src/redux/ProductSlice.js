@@ -1,5 +1,4 @@
 
-import { createSlice } from "@reduxjs/toolkit";
 
 // const ProductSlice = '';
 
@@ -22,18 +21,20 @@ import { createSlice } from "@reduxjs/toolkit";
 //     }
 // });
 
+import { createSlice } from "@reduxjs/toolkit";
+
 console.log('ProductSlice');
 
 const ProductSlice = createSlice({
-    name: 'poductList',
+    name: 'productList',
     initialState: {
-        poductListObj: []
+        productListObj: []
     },
     reducers: {
         setProductListObj: (state, action) => {
             console.log(state);
             console.log(action);
-            state.poductListObj = action.payload; // data coming from the component 
+            state.poductListObj = action.payload; // payload = data coming from the component 
         }
         // more methods as needed 
     }

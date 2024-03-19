@@ -1,13 +1,21 @@
 // https://dummyjson.com/products?limit=10&skip=0
 
 import { useState, useEffect } from "react";
-
 import { getAllProducts } from '../services/ProductService';
 import { Link } from "react-router-dom";
+
+// imports related to redux 
+import { setProductListObj } from '../redux/ProductSlice';
+import { useDispatch, useSelector } from "react-redux";
 
 const ProductList = () => {
 
     const [products, setProducts] = useState('');
+
+    // const productListDataFromStore = useSelector();
+    // const productListDataFromStore = useSelector(() => {});
+    // const productListDataFromStore = useSelector((store) => { return store.productList.productListObj; });
+    const productListDataFromStore = useSelector(abc => abc.productList.productListObj);
 
     useEffect(() => {
 
@@ -24,6 +32,7 @@ const ProductList = () => {
     return (
         <>
             <h1>Product List </h1>
+            <p> {productListDataFromStore && productListDataFromStore.length} </p>
             {products &&
                 products.map((product) => {
                     return <div>
@@ -35,6 +44,45 @@ const ProductList = () => {
     );
 };
 export default ProductList;
+
+
+// // https://dummyjson.com/products?limit=10&skip=0
+
+// import { useState, useEffect } from "react";
+
+// import { getAllProducts } from '../services/ProductService';
+// import { Link } from "react-router-dom";
+
+// const ProductList = () => {
+
+//     const [products, setProducts] = useState('');
+
+//     useEffect(() => {
+
+//         getAllProducts()
+//             .then((response) => {
+//                 console.log(response.data);
+//                 setProducts(response.data.products);
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//             });
+
+//     }, []);
+//     return (
+//         <>
+//             <h1>Product List </h1>
+//             {products &&
+//                 products.map((product) => {
+//                     return <div>
+//                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
+//                     </div>
+//                 })
+//             }
+//         </>
+//     );
+// };
+// export default ProductList;
 
 
 // import { useState, useEffect } from "react";

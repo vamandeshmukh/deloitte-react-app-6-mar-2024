@@ -26,7 +26,7 @@ console.log('store');
 
 const store = configureStore({
     reducer: {
-        poductList: ProductReducer
+        productList: ProductReducer
         // anyComponent: AnyComponentReducer
     }
 });
