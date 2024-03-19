@@ -6,7 +6,6 @@ const ProductDetails = () => {
 
     const productParam = useParams();
 
-    const [productId, setProductId] = useState('');
     const [product, setProduct] = useState('');
     const [errorMessage, serErrorMessage] = useState('');
 
@@ -23,57 +22,19 @@ const ProductDetails = () => {
                 serErrorMessage(error.response.data.message);
                 setProduct('');
             });
-        setProductId('');
     }, []);
-
-    const handleProductIdInput = (evt) => {
-        console.log(evt.target.value);
-        setProductId(evt.target.value);
-        evt.preventDefault();
-    };
-
-    const searchProductById = (evt) => {
-        evt.preventDefault();
-        console.log(productId);
-        getProductById(productId)
-            .then((response) => {
-                console.log(response);
-                setProduct(response.data);
-                serErrorMessage('');
-            })
-            .catch((error) => {
-                console.log(error);
-                serErrorMessage(error.response.data.message);
-                setProduct('');
-            });
-        setProductId('');
-    };
 
     return (
         <>
-            <p className="display-5 text-primary">Product Details</p>
-            <div>
-                <form onSubmit={searchProductById}>
-                    <input
-                        type="number"
-                        name="productId"
-                        value={productId}
-                        onChange={handleProductIdInput}
-                        placeholder="Enter product id"
-                        autoFocus
-                        required
-                    />
-                    <input
-                        type="submit"
-                        value="Search"
-                    />
-                </form>
-            </div>
+            <p className="mt-3 display-5 text-primary">Product Details</p>
             {product &&
-                <div className="mx-3 my-3 px-3 py-3 shadow rounded" >
+                <div className="border border-secondary shadow rounded px-2 py-2" >
                     <h2>{product.title}</h2>
                     <p>{product.description} {product.description}</p>
-                    <p>{product.price}</p>
+                    <p>MRP ₹{product.price}/-</p>
+                    <p>Discount {product.discountPercentage}%</p>
+                    {/* // create and use  calc function below   */}
+                    <p>Effective Price ₹{product.price - (product.price * (product.discountPercentage) / 100)}/-</p>
                     <img width={'25%'} src={product.thumbnail} alt="product thumbnail" />
                 </div>
             }

@@ -3,6 +3,7 @@ import Home from './Home';
 import Login from './Login';
 import ProductDetails from './ProductDetails';
 import ProductList from './ProductList';
+import ProductPages from './ProductPages';
 import Page404 from './Page404';
 import MenuBar from './MenuBar';
 
@@ -23,6 +24,7 @@ const AppRoutes = () => {
                         <Route exact path='product-details' element={<ProductDetails />} />
                         <Route path='product-details/:productId' element={<ProductDetails />} />
                         <Route exact path='product-list' element={<ProductList />} />
+                        <Route exact path='product-pages' element={<ProductPages />} />
                         <Route exact path='' element={<Home />} />
                         <Route path='*' element={<Page404 />} />
                     </Routes>

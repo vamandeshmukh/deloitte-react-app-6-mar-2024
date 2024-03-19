@@ -1,5 +1,6 @@
+// https://dummyjson.com/products?limit=10&skip=0
+
 import { useState, useEffect } from "react";
-import ProductDetails from "./ProductDetails";
 
 import { getAllProducts } from '../services/ProductService';
 import { Link } from "react-router-dom";
@@ -26,12 +27,10 @@ const ProductList = () => {
             {products &&
                 products.map((product) => {
                     return <div>
-                        {/* <Link to={'/product-details/22'}>{product.title}</Link> */}
                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
                     </div>
                 })
             }
-            <ProductDetails />
         </>
     );
 };

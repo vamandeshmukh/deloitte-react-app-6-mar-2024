@@ -9,7 +9,12 @@ const productUrl = 'https://dummyjson.com/products';
 
 const getAllProducts = () => {
     console.log('getAllProducts');
-    return axios.get(productUrl);
+    return axios.get(`${productUrl}?limit=0`);
+};
+
+const getProductsWithPagination = (limit, skip) => {
+    console.log(limit, skip);
+    return axios.get(`${productUrl}?limit=${limit}&skip=${skip}`);
 };
 
 const getProductById = (productId) => {
@@ -21,7 +26,7 @@ const addProduct = () => { };
 
 // more functions 
 
-export { getAllProducts, getProductById, addProduct };
+export { getAllProducts, getProductsWithPagination, getProductById, addProduct };
 
 
 // // option 1 to export multiple functions
