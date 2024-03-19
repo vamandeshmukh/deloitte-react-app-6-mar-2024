@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getProductById } from "../services/ProductService";
+import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
+
+    const productParam = useParams();
 
     const [productId, setProductId] = useState('');
     const [product, setProduct] = useState('');
     const [errorMessage, serErrorMessage] = useState('');
+
+    useEffect(() => {
+        console.log(productParam.productId);
+        getProductById(productParam.productId)
+            .then((response) => {
+                console.log(response);
+                setProduct(response.data);
+                serErrorMessage('');
+            })
+            .catch((error) => {
+                console.log(error);
+                serErrorMessage(error.response.data.message);
+                setProduct('');
+            });
+        setProductId('');
+    }, []);
 
     const handleProductIdInput = (evt) => {
         console.log(evt.target.value);
@@ -68,6 +87,76 @@ const ProductDetails = () => {
 
 export default ProductDetails;
 
+// import { useState } from "react";
+// import { getProductById } from "../services/ProductService";
+
+// const ProductDetails = () => {
+
+//     const [productId, setProductId] = useState('');
+//     const [product, setProduct] = useState('');
+//     const [errorMessage, serErrorMessage] = useState('');
+
+//     const handleProductIdInput = (evt) => {
+//         console.log(evt.target.value);
+//         setProductId(evt.target.value);
+//         evt.preventDefault();
+//     };
+
+//     const searchProductById = (evt) => {
+//         evt.preventDefault();
+//         console.log(productId);
+//         getProductById(productId)
+//             .then((response) => {
+//                 console.log(response);
+//                 setProduct(response.data);
+//                 serErrorMessage('');
+//             })
+//             .catch((error) => {
+//                 console.log(error);
+//                 serErrorMessage(error.response.data.message);
+//                 setProduct('');
+//             });
+//         setProductId('');
+//     };
+
+//     return (
+//         <>
+//             <p className="display-5 text-primary">Product Details</p>
+//             <div>
+//                 <form onSubmit={searchProductById}>
+//                     <input
+//                         type="number"
+//                         name="productId"
+//                         value={productId}
+//                         onChange={handleProductIdInput}
+//                         placeholder="Enter product id"
+//                         autoFocus
+//                         required
+//                     />
+//                     <input
+//                         type="submit"
+//                         value="Search"
+//                     />
+//                 </form>
+//             </div>
+//             {product &&
+//                 <div className="mx-3 my-3 px-3 py-3 shadow rounded" >
+//                     <h2>{product.title}</h2>
+//                     <p>{product.description} {product.description}</p>
+//                     <p>{product.price}</p>
+//                     <img width={'25%'} src={product.thumbnail} alt="product thumbnail" />
+//                 </div>
+//             }
+//             <div> {errorMessage &&
+//                 <p> {errorMessage} </p>
+//             }
+//             </div>
+//         </>
+//     );
+// }
+
+// export default ProductDetails;
+
 
 // import PropTypes from 'react'
 
@@ -129,6 +218,5 @@ export default ProductDetails;
 //     );
 // }
 // export default ProductDetails;
-
 
 

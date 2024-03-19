@@ -21,6 +21,7 @@ const AppRoutes = () => {
                         <Route exact path='home' element={<Home />} />
                         <Route exact path='login' element={<Login />} />
                         <Route exact path='product-details' element={<ProductDetails />} />
+                        <Route path='product-details/:productId' element={<ProductDetails />} />
                         <Route exact path='product-list' element={<ProductList />} />
                         <Route exact path='' element={<Home />} />
                         <Route path='*' element={<Page404 />} />

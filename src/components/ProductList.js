@@ -26,7 +26,7 @@ const ProductList = () => {
             {products &&
                 products.map((product) => {
                     return <div>
-                        <Link to='/product-details'>{product.title}</Link>
+                        <Link to={'/product-details/22'}>{product.title}</Link>
                     </div>
                 })
             }
