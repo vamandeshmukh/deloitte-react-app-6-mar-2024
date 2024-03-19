@@ -35,7 +35,7 @@ const ProductList = () => {
             <p> {productListDataFromStore && productListDataFromStore.length} </p>
             {products &&
                 products.map((product) => {
-                    return <div>
+                    return <div key={product.id}>
                         <Link to={`/product-details/${product.id}`}>{product.title}</Link>
                     </div>
                 })
