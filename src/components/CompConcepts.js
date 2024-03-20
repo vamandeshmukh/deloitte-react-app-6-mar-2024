@@ -1,26 +1,48 @@
-import { useState } from "react";
-import ThemeButton from "../context/ThemeButton";
-import { ThemeProvider } from "../context/ThemeContext";
-import ThemedComponent from "../context/ThemedComponent";
+import { Suspense, lazy } from "react";
+import FallbackComponent from "./FallbackComponent";
+
+const LazyComponent = lazy(() => import('./LazyComponent'));
+
 
 const CompConcepts = () => {
-
-    // let someData =  'abc'; // 'def'
-    const [someData, setSomeData] = useState('abc'); // 'def'
-
     return (
         <>
-            <p>Context API Concepts</p>
-            <ThemeProvider>
-                <p>Some text</p>
-                <ThemedComponent />
-                <ThemeButton />
-            </ThemeProvider>
+            <p>Lazy Suspense Concepts</p>
+            <Suspense fallback={FallbackComponent}>
+                <p>Lazy...</p>
+                <LazyComponent />
+            </Suspense>
+
         </>
     );
 }
 
 export default CompConcepts;
+
+
+// import { useState } from "react";
+// import ThemeButton from "../context/ThemeButton";
+// import { ThemeProvider } from "../context/ThemeContext";
+// import ThemedComponent from "../context/ThemedComponent";
+
+// const CompConcepts = () => {
+
+//     // let someData =  'abc'; // 'def'
+//     const [someData, setSomeData] = useState('abc'); // 'def'
+
+//     return (
+//         <>
+//             <p>Context API Concepts</p>
+//             <ThemeProvider>
+//                 <p>Some text</p>
+//                 <ThemedComponent />
+//                 <ThemeButton />
+//             </ThemeProvider>
+//         </>
+//     );
+// }
+
+// export default CompConcepts;
 
 
 // import BootstrapLearning from "./BootstrapLearning";
