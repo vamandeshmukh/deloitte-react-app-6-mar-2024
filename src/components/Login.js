@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react";
+import { setUserData } from '../redux/UserSlice';
+import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
 
-    const [loginData, setLoginData] = useState({ username: '', password: '' });
-    const [loginMessage, setLoginMessage] = useState('');
-    const [messageStyle, setMessageStyle] = useState({ color: 'blue' }); // apply multiple styles and change then dynamically 
 
-    useEffect(() => {
-        setLoginData(
-            { username: '', password: '' }
-        );
-        setLoginMessage('');
-    }, []);
+    const dispatch = useDispatch();
+
+    const loginData = useSelector(store => store.user.userData);
+    const [loginInput, setLoginInput] = useState({ username: '', password: '' });
+    const [loginMessage, setLoginMessage] = useState('');
+    const [messageStyle, setMessageStyle] = useState({ color: 'blue' });
+
+    // useEffect(() => {
+    //     setLoginData(
+    //         { username: '', password: '' }
+    //     );
+    //     setLoginMessage('');
+    // }, []);
 
     const handleLogin = (evt) => {
         console.log(evt.target.value);
-        setLoginData({ ...loginData, [evt.target.name]: evt.target.value });
+        setLoginInput({ ...loginInput, [evt.target.name]: evt.target.value });
     };
 
     const submitLogin = (evt) => {
         console.log(loginData);
         if (loginData.username === 'sonu' && loginData.password === 'sonu') {
+            dispatch(setUserData(loginInput));
             setLoginMessage(`${loginData.username} logged in successfully!`);
             setMessageStyle({ color: 'green' });
 
@@ -28,20 +35,17 @@ const Login = () => {
             setLoginMessage('Invalid credentials.');
             setMessageStyle({ color: 'red' });
         }
-        setLoginData({ username: '', password: '' }); // clear form
-        evt.preventDefault(); // prevents page reload  
+        setLoginInput({ username: '', password: '' });
+        evt.preventDefault();
     };
 
     return (
         <>
-            {/* <h1 style="color: blue;">Login Component</h1> */}
-            {/* <h1 style={{ color: 'blue', background: 'yellow' }}>Login Component</h1 > */}
-            {/* <h1 style={{ color: 'blue' }}>Login Component</h1 > */}
             <h1 style={messageStyle}>Login Component</h1 >
             <form onSubmit={submitLogin}>
-                <input type="text" name="username" value={loginData.username} onChange={handleLogin} />
+                <input type="text" name="username" value={loginInput.username} onChange={handleLogin} />
                 <br />
-                <input type="password" name="password" value={loginData.password} onChange={handleLogin} />
+                <input type="password" name="password" value={loginInput.password} onChange={handleLogin} />
                 <br />
                 <input type="submit" value="Login" />
             </form>
@@ -53,6 +57,62 @@ const Login = () => {
     );
 }
 export default Login;
+
+// import { useEffect, useState } from "react";
+
+// const Login = () => {
+
+//     const [loginData, setLoginData] = useState({ username: '', password: '' });
+//     const [loginMessage, setLoginMessage] = useState('');
+//     const [messageStyle, setMessageStyle] = useState({ color: 'blue' }); // apply multiple styles and change then dynamically
+
+//     useEffect(() => {
+//         setLoginData(
+//             { username: '', password: '' }
+//         );
+//         setLoginMessage('');
+//     }, []);
+
+//     const handleLogin = (evt) => {
+//         console.log(evt.target.value);
+//         setLoginData({ ...loginData, [evt.target.name]: evt.target.value });
+//     };
+
+//     const submitLogin = (evt) => {
+//         console.log(loginData);
+//         if (loginData.username === 'sonu' && loginData.password === 'sonu') {
+//             setLoginMessage(`${loginData.username} logged in successfully!`);
+//             setMessageStyle({ color: 'green' });
+
+//         } else {
+//             setLoginMessage('Invalid credentials.');
+//             setMessageStyle({ color: 'red' });
+//         }
+//         setLoginData({ username: '', password: '' }); // clear form
+//         evt.preventDefault(); // prevents page reload
+//     };
+
+//     return (
+//         <>
+//             {/* <h1 style="color: blue;">Login Component</h1> */}
+//             {/* <h1 style={{ color: 'blue', background: 'yellow' }}>Login Component</h1 > */}
+//             {/* <h1 style={{ color: 'blue' }}>Login Component</h1 > */}
+//             <h1 style={messageStyle}>Login Component</h1 >
+//             <form onSubmit={submitLogin}>
+//                 <input type="text" name="username" value={loginData.username} onChange={handleLogin} />
+//                 <br />
+//                 <input type="password" name="password" value={loginData.password} onChange={handleLogin} />
+//                 <br />
+//                 <input type="submit" value="Login" />
+//             </form>
+//             {
+//                 loginMessage &&
+//                 <p style={messageStyle}>{loginMessage}</p>
+//             }
+//         </>
+//     );
+// }
+// export default Login;
 
 
 // import { useEffect, useState } from "react";
