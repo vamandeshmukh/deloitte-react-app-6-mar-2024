@@ -164,8 +164,10 @@ https://react.dev/reference/react/lazy#suspense-for-code-splitting
 Build 
 Build
 
-
-
+- on project folder in CMD - 
+npm run build
+cd build 
+npx http-server 
 
 --------------------------------------
 

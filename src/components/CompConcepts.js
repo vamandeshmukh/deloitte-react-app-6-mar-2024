@@ -12,7 +12,6 @@ const CompConcepts = () => {
                 <p>Lazy...</p>
                 <LazyComponent />
             </Suspense>
-
         </>
     );
 }
