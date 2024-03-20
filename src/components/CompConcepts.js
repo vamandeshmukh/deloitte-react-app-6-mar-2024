@@ -5,7 +5,7 @@ import ThemedComponent from "../context/ThemedComponent";
 
 const CompConcepts = () => {
 
-    // let someData =  'abc'; // 'def' 
+    // let someData =  'abc'; // 'def'
     const [someData, setSomeData] = useState('abc'); // 'def'
 
     return (
